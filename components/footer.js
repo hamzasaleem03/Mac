@@ -13,8 +13,8 @@ function footer() {
         </div>
         <div className="container flex md:items-start items-center md:justify-between md:flex-row flex-col justify-center mx-auto gap-x-8 gap-y-8 md:text-left text-center 2xl:px-4 xl:px-10 px-4">
           <svg
-            width="98"
-            height="23"
+            width={98}
+            height={23}
             viewBox="0 0 98 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -24,26 +24,27 @@ function footer() {
               fill="white"
             />
           </svg>
+
           <div className="flex gap-6 items-center">
             <svg
               className="cursor-pointer"
-              width="24"
-              height="24"
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M22.5 12.0637C22.5 6.26528 17.7984 1.56372 12 1.56372C6.20156 1.56372 1.5 6.26528 1.5 12.0637C1.5 17.3043 5.33906 21.6483 10.3594 22.4367V15.0998H7.69266V12.0637H10.3594V9.75044C10.3594 7.11934 11.9273 5.66481 14.3255 5.66481C15.4744 5.66481 16.6763 5.87013 16.6763 5.87013V8.45435H15.3516C14.048 8.45435 13.6402 9.26341 13.6402 10.095V12.0637H16.552L16.087 15.0998H13.6406V22.4376C18.6609 21.6497 22.5 17.3058 22.5 12.0637Z"
                 fill="white"
               />
             </svg>
             <svg
               className="cursor-pointer"
-              width="24"
-              height="24"
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -55,13 +56,13 @@ function footer() {
             </svg>
             <svg
               className="cursor-pointer"
-              width="24"
-              height="24"
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_90_736)">
+              <g clipPath="url(#clip0_90_736)">
                 <path
                   d="M23.8418 6.97453C23.8418 4.86516 22.2902 3.16828 20.3731 3.16828C17.7762 3.04687 15.1277 3 12.4212 3H11.5774C8.87743 3 6.22431 3.04687 3.62743 3.16875C1.71493 3.16875 0.163371 4.875 0.163371 6.98437C0.0461835 8.65266 -0.00350401 10.3214 -0.000691512 11.9902C-0.00537901 13.6589 0.047746 15.3292 0.158683 17.0011C0.158683 19.1105 1.71025 20.8214 3.62275 20.8214C6.35087 20.948 9.14931 21.0042 11.9946 20.9995C14.8446 21.0089 17.6352 20.9495 20.3665 20.8214C22.2837 20.8214 23.8352 19.1105 23.8352 17.0011C23.9477 15.3277 23.9993 13.6589 23.9946 11.9855C24.0052 10.3167 23.9543 8.64641 23.8418 6.97453ZM9.70243 16.5886V7.37766L16.4993 11.9808L9.70243 16.5886Z"
                   fill="white"
@@ -69,14 +70,14 @@ function footer() {
               </g>
               <defs>
                 <clipPath id="clip0_90_736">
-                  <rect width="24" height="24" fill="white" />
+                  <rect width={24} height={24} fill="white" />
                 </clipPath>
               </defs>
             </svg>
             <svg
               className="cursor-pointer"
-              width="24"
-              height="24"
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -93,15 +94,23 @@ function footer() {
             <li className="text-base font-bold text-white mb-8 open">
               Macem’s Main
             </li>
-            <li className="text-base text-white cursor-pointer open">About us</li>
+            <li className="text-base text-white cursor-pointer open">
+              About us
+            </li>
             <li className="text-base text-white cursor-pointer my-6 open">
               Carriers
             </li>
-            <li className="text-base text-white cursor-pointer open">Affiliates</li>
+            <li className="text-base text-white cursor-pointer open">
+              Affiliates
+            </li>
           </ul>
           <ul>
-            <li className="text-base font-bold text-white mb-8 open">Services</li>
-            <li className="text-base text-white cursor-pointer open">Size guide</li>
+            <li className="text-base font-bold text-white mb-8 open">
+              Services
+            </li>
+            <li className="text-base text-white cursor-pointer open">
+              Size guide
+            </li>
             <li className="text-base text-white cursor-pointer my-6 open">
               Loyalty
             </li>
@@ -117,7 +126,9 @@ function footer() {
             <li className="text-base text-white cursor-pointer my-6 open">
               Cookie Policy
             </li>
-            <li className="text-base text-white cursor-pointer open">Trademark</li>
+            <li className="text-base text-white cursor-pointer open">
+              Trademark
+            </li>
             <li className="text-base text-white cursor-pointer mt-6 open">
               Terms of use
             </li>
@@ -128,13 +139,17 @@ function footer() {
             <li className="text-base text-white cursor-pointer my-6 open">
               Delivery
             </li>
-            <li className="text-base text-white cursor-pointer open">Returns</li>
+            <li className="text-base text-white cursor-pointer open">
+              Returns
+            </li>
             <li className="text-base text-white cursor-pointer mt-6 open">
               Contact us
             </li>
           </ul>
           <ul>
-            <li className="text-base font-bold text-white mb-8 open">Visit us</li>
+            <li className="text-base font-bold text-white mb-8 open">
+              Visit us
+            </li>
             <li className="text-base text-white cursor-pointer open">Paris</li>
             <li className="text-base text-white cursor-pointer my-6 open">
               Los Angeles
@@ -145,7 +160,9 @@ function footer() {
           </ul>
           <ul>
             <li className="text-base font-bold text-white mb-8 open">Gift </li>
-            <li className="text-base text-white cursor-pointer open">Gift card</li>
+            <li className="text-base text-white cursor-pointer open">
+              Gift card
+            </li>
             <li className="text-base text-white cursor-pointer my-6 open">
               Coupons
             </li>

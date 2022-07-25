@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
-function header() {
+function header(props) {
   const [nav, setshowNav] = useState(false);
+  const [pro, setshowPro] = useState(false);
+  const [pro1, setshowPro1] = useState(false);
   const list = [
     {
       name: "Home",
@@ -11,11 +13,11 @@ function header() {
     {
       name: "Products",
       link: "/",
-      state: false,
+      state: true,
     },
     {
       name: "Our Story",
-      link: "/",
+      link: "./ourstory",
       state: false,
     },
     {
@@ -24,15 +26,68 @@ function header() {
       state: false,
     },
   ];
+  let cart = [
+    {
+      bag: "https://tuk-cdn.s3.amazonaws.com/can-uploader/pexelssd2323.png",
+      rx: "RX980",
+      mini: "Mini Tote Bag",
+      dollar: "$ 80",
+      size: "Size : Small",
+      color: "Colour : Orange",
+      quantity: "Quantity : 1 Item",
+      leather: "Composition : 100% calf leather",
+    },
+    {
+      bag: "https://tuk-cdn.s3.amazonaws.com/can-uploader/2121212.png",
+      rx: "RF293",
+      mini: "Parmigiani Flared Pants",
+      dollar: "$1,200",
+      size: "Size : Large",
+      color: "Colour : Black",
+      quantity: "Quantity : 1 Item",
+      leather: "Composition : 100% calf leather",
+    },
+    {
+      bag: "https://tuk-cdn.s3.amazonaws.com/can-uploader/1212433bgfvb5t4.png",
+      rx: "RX980",
+      mini: "Mini Tote Bag",
+      dollar: "$ 80",
+      size: "Size : Small",
+      color: "Colour : Orange",
+      quantity: "Quantity : 1 Item",
+      leather: "Composition : 100% calf leather",
+    },
+    {
+      bag: "https://tuk-cdn.s3.amazonaws.com/can-uploader/2223ewqwe32.png",
+      rx: "RF293",
+      mini: "Parmigiani Flared Pants",
+      dollar: "$1,200",
+      size: "Size : Large",
+      color: "Colour : Black",
+      quantity: "Quantity : 1 Item",
+      leather: "Composition : 100% calf leather",
+    },
+    {
+      bag: "https://tuk-cdn.s3.amazonaws.com/can-uploader/black56tgfv.png",
+      rx: "RF293",
+      mini: "Parmigiani Flared Pants",
+      dollar: "$1,200",
+      size: "Size : Large",
+      color: "Colour : Black",
+      quantity: "Quantity : 1 Item",
+      leather: "Composition : 100% calf leather",
+    },
+  ];
   return (
     <>
       {/* Desktop view */}
 
       <div className="block relative">
         <div className="absolute left-0 top-0 -z-10">
+          {/* <img  src="https://tuk-cdn.s3.amazonaws.com/can-uploader/uptop24324.png" alt="up"/> */}
           <svg
-            width="228"
-            height="276"
+            width={228}
+            height={276}
             viewBox="0 0 228 276"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +98,7 @@ function header() {
                 cy="76.4488"
                 r="99.5512"
                 fill="url(#paint0_linear_90_541)"
-                fill-opacity="0.56"
+                fillOpacity="0.56"
               />
             </g>
             <g filter="url(#filter1_f_90_541)">
@@ -57,14 +112,14 @@ function header() {
             <defs>
               <filter
                 id="filter0_f_90_541"
-                x="-179"
+                x={-179}
                 y="-123.102"
                 width="399.103"
                 height="399.102"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity={0} result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -72,20 +127,20 @@ function header() {
                   result="shape"
                 />
                 <feGaussianBlur
-                  stdDeviation="50"
+                  stdDeviation={50}
                   result="effect1_foregroundBlur_90_541"
                 />
               </filter>
               <filter
                 id="filter1_f_90_541"
                 x="-118.056"
-                y="-135"
+                y={-135}
                 width="345.685"
                 height="345.685"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity={0} result="BackgroundImageFix" />
                 <feBlend
                   mode="normal"
                   in="SourceGraphic"
@@ -93,7 +148,7 @@ function header() {
                   result="shape"
                 />
                 <feGaussianBlur
-                  stdDeviation="50"
+                  stdDeviation={50}
                   result="effect1_foregroundBlur_90_541"
                 />
               </filter>
@@ -102,23 +157,23 @@ function header() {
                 x1="20.5512"
                 y1="-23.1024"
                 x2="20.5512"
-                y2="176"
+                y2={176}
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FF7BCA" stop-opacity="0.22" />
-                <stop offset="1" stop-color="#FFC56F" stop-opacity="0.46" />
+                <stop stopColor="#FF7BCA" stopOpacity="0.22" />
+                <stop offset={1} stopColor="#FFC56F" stopOpacity="0.46" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_90_541"
                 x1="54.7867"
-                y1="-35"
+                y1={-35}
                 x2="54.7867"
                 y2="110.685"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#F22FB0" stop-opacity="0.3" />
-                <stop offset="1" stop-color="#F58A25" stop-opacity="0" />
-                <stop offset="1" stop-color="#7061A3" stop-opacity="0" />
+                <stop stopColor="#F22FB0" stopOpacity="0.3" />
+                <stop offset={1} stopColor="#F58A25" stopOpacity={0} />
+                <stop offset={1} stopColor="#7061A3" stopOpacity={0} />
               </linearGradient>
             </defs>
           </svg>
@@ -126,8 +181,8 @@ function header() {
         <nav className="flex justify-between items-center container relative z-20 px-4 pt-8 mx-auto 2xl:px-4 xl:px-10">
           <a href="/">
             <svg
-              width="98"
-              height="23"
+              width={98}
+              height={23}
               viewBox="0 0 98 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -139,10 +194,13 @@ function header() {
             </svg>
           </a>
           <div className="flex item-center gap-6">
-            <div className="flex gap-2 items-center cursor-pointer">
+            <div
+              onClick={() => props.setSearch(true)}
+              className="flex gap-2 items-center cursor-pointer"
+            >
               <svg
-                width="24"
-                height="24"
+                width={24}
+                height={24}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,23 +208,24 @@ function header() {
                 <path
                   d="M10.3636 3C8.90722 3 7.48354 3.43187 6.2726 4.24099C5.06167 5.05011 4.11786 6.20015 3.56052 7.54567C3.00319 8.89119 2.85737 10.3718 3.14149 11.8002C3.42562 13.2286 4.12693 14.5406 5.15675 15.5704C6.18657 16.6003 7.49863 17.3016 8.92703 17.5857C10.3554 17.8698 11.836 17.724 13.1815 17.1667C14.527 16.6093 15.6771 15.6655 16.4862 14.4546C17.2953 13.2437 17.7272 11.82 17.7272 10.3636C17.7271 8.41069 16.9512 6.5378 15.5703 5.15688C14.1894 3.77597 12.3165 3.00012 10.3636 3V3Z"
                   stroke="#4B5563"
-                  stroke-miterlimit="10"
+                  strokeMiterlimit={10}
                 />
                 <path
                   d="M15.8574 15.8583L21.0001 21.0009"
                   stroke="#4B5563"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeMiterlimit={10}
+                  strokeLinecap="round"
                 />
               </svg>
+
               <p class="text-base leading-none text-right text-gray-800 open">
                 Search
               </p>
             </div>
             <div className="flex gap-2 items-center cursor-pointer">
               <svg
-                width="24"
-                height="24"
+                width={24}
+                height={24}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -174,18 +233,22 @@ function header() {
                 <path
                   d="M16.5436 3.75C13.5005 3.75 12.0005 6.75 12.0005 6.75C12.0005 6.75 10.5005 3.75 7.45735 3.75C4.98423 3.75 3.02579 5.81906 3.00048 8.28797C2.94892 13.4128 7.06595 17.0573 11.5786 20.1202C11.703 20.2048 11.85 20.2501 12.0005 20.2501C12.151 20.2501 12.2979 20.2048 12.4224 20.1202C16.9345 17.0573 21.0516 13.4128 21.0005 8.28797C20.9752 5.81906 19.0167 3.75 16.5436 3.75Z"
                   stroke="#1F2937"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
+
               <p class="text-base leading-none text-right text-gray-800 open">
                 Favourites
               </p>
             </div>
-            <div className="flex gap-2 items-center cursor-pointer">
+            <div
+              onClick={() => setshowNav(true)}
+              className="flex gap-2 items-center cursor-pointer"
+            >
               <svg
-                width="24"
-                height="24"
+                width={24}
+                height={24}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,29 +256,32 @@ function header() {
                 <path
                   d="M8.25 20.25C8.66421 20.25 9 19.9142 9 19.5C9 19.0858 8.66421 18.75 8.25 18.75C7.83579 18.75 7.5 19.0858 7.5 19.5C7.5 19.9142 7.83579 20.25 8.25 20.25Z"
                   stroke="#1F2937"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M18.75 20.25C19.1642 20.25 19.5 19.9142 19.5 19.5C19.5 19.0858 19.1642 18.75 18.75 18.75C18.3358 18.75 18 19.0858 18 19.5C18 19.9142 18.3358 20.25 18.75 20.25Z"
                   stroke="#1F2937"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M2.25 3.75H5.25L7.5 16.5H19.5"
                   stroke="#1F2937"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M7.5 13.5H19.1925C19.2792 13.5001 19.3633 13.4701 19.4304 13.4151C19.4975 13.3601 19.5434 13.2836 19.5605 13.1986L20.9105 6.44859C20.9214 6.39417 20.92 6.338 20.9066 6.28414C20.8931 6.23029 20.8679 6.18009 20.8327 6.13717C20.7975 6.09426 20.7532 6.05969 20.703 6.03597C20.6528 6.01225 20.598 5.99996 20.5425 6H6"
                   stroke="#1F2937"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
-              <p class="text-base leading-none text-right text-gray-800 open">Bag</p>
+
+              <p class="text-base leading-none text-right text-gray-800 open">
+                Bag
+              </p>
             </div>
           </div>
         </nav>
@@ -228,7 +294,10 @@ function header() {
                 return (
                   <div key={item.name}>
                     <Link href={tag}>
-                      <li className="text-base leading-none text-right text-gray-800 cursor-pointer open">
+                      <li
+                        onClick={() => setshowPro(item.state)}
+                        className="text-base leading-none text-right text-gray-800 cursor-pointer open"
+                      >
                         {item.name}
                       </li>
                     </Link>
@@ -278,6 +347,295 @@ function header() {
           <button className="px-8 py-4 text-sm font-semibold leading-none w-full tracking-wide product-gradient-button product-gradient2  rounded text-gray-50  ">Login</button>
         </div>
       </nav> */}
+
+      {/* Cart Section */}
+      <div
+        onClick={() => setshowNav(false)}
+        className={`bg-black block z-20 bg-opacity-60 fixed top-0 w-full h-full backdrop-blur-lg ${
+          nav ? `block` : `hidden`
+        }`}
+      ></div>
+      <nav
+        className={`bg-white max-w-[720px] w-full h-screen z-20  fixed right-0  ml-auto duration-300 ease-in-out transform ${
+          nav ? `translate-x-0` : `translate-x-[800px]`
+        }`}
+      >
+        <div className="flex justify-between items-center p-10">
+          <p className="text-2xl font-bold text-center text-gray-800">
+            Your Shopping Bag
+          </p>
+          <svg
+            onClick={() => setshowNav(false)}
+            className="cursor-pointer"
+            width={18}
+            height={18}
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 2.09313L15.9069 0L9 6.90687L2.09313 0L0 2.09313L6.90687 9L0 15.9069L2.09313 18L9 11.0931L15.9069 18L18 15.9069L11.0931 9L18 2.09313Z"
+              fill="#1F2937"
+            />
+          </svg>
+        </div>
+        <hr className="border border-gray-200 my-10" />
+        <div className="h-[600px] overflow-y-scroll">
+          {cart.map((item, index) => {
+            return (
+              <div
+                key={index * Math.random * 1000}
+                className="px-10 flex justify-start items-start gap-8 mb-10 overflow-y-scroll lg:flex-row flex-col space-y-4"
+              >
+                <img
+                  className="w-[187px] h-[187px]"
+                  src={item.bag}
+                  alt={item.bag}
+                />
+                <div aria-label="text" className="w-full">
+                  <p className="text-sm text-gray-600 open mb-1">{item.rx}</p>
+                  <div className="flex justify-between items-center mb-2">
+                    <p className="text-xl text-gray-800 open">{item.mini}</p>
+                    <p className="text-xl font-bold text-gray-800 open">
+                      {item.dollar}
+                    </p>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-2 open">{item.size}</p>
+                  <p className="text-sm text-gray-600 mb-2 open">
+                    {item.color}
+                  </p>
+                  <p className="text-sm text-gray-600 mb-2 open">
+                    {item.quantity}
+                  </p>
+                  <p className="text-sm text-gray-600 open">{item.leather}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-between items-center mt-10 px-10">
+          <p className="text-2xl font-semibold text-gray-800 open">TOTAL</p>
+          <p className="text-2xl font-semibold text-gray-800 open">$1,280</p>
+        </div>
+        <div className="mt-6 px-10">
+          <button className="raleway text-base font-medium leading-none text-white w-full px-5 py-5 bg-gray-800 text-center hover:bg-gray-700 transform duration-300 ease-in-out">
+            SEE YOUR SHOPPING BAG
+          </button>
+        </div>
+      </nav>
+      {/* End */}
+
+      {/* Product Interaction section */}
+      <div
+        onClick={() => setshowPro(true)}
+        className={`bg-black block z-20 bg-opacity-60 fixed top-0 w-full h-full backdrop-blur-lg ${
+          pro ? `block` : `hidden`
+        }`}
+      ></div>
+      <div
+        className={`pt-12 bg-white max-h-[850px] z-20  fixed top-0 right-0 left-0 duration-300 ease-in-out transform ${
+          pro ? `translate-y-0` : `translate-y-[-900px]`
+        }`}
+      >
+        <div className="flex justify-between items-center px-20">
+          <div className="flex items-center gap-x-20 ">
+            <p className="text-xl font-bold text-gray-800 cursor-pointer border-gray-800 border-b-4 pb-8 h-[60px] open">
+              New{" "}
+            </p>
+            <p
+              onClick={() => setshowPro1(true)}
+              className="text-xl text-gray-800 cursor-pointer hover:border-gray-800 hover:border-b-4 border-transparent pb-8 h-[60px] open"
+            >
+              Men
+            </p>
+            <p className="text-xl text-gray-800 cursor-pointer hover:border-gray-800 hover:border-b-4 border-transparent pb-8 h-[60px] open">
+              Women
+            </p>
+          </div>
+          <div onClick={() => setshowPro(false)} className="-mt-4">
+            <svg
+              className="cursor-pointer"
+              width={18}
+              height={18}
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 2.09313L15.9069 0L9 6.90687L2.09313 0L0 2.09313L6.90687 9L0 15.9069L2.09313 18L9 11.0931L15.9069 18L18 15.9069L11.0931 9L18 2.09313Z"
+                fill="#1F2937"
+              />
+            </svg>
+          </div>
+        </div>
+        <hr className="border-gray-200 w-full" />
+        <div className="flex h-full">
+          <div className="pl-20 max-w-[376px] w-full mt-8">
+            <p className="text-xl hover:font-bold text-gray-600 open">Men</p>
+            <p className="text-xl hover:font-bold text-gray-600 open my-8">
+              Women
+            </p>
+            <p className="text-xl hover:font-bold text-gray-600 open">
+              Macem 2023 Collection
+            </p>
+          </div>
+          <div className="max-h-screen bg-gray-200 w-[1px] "></div>
+          <div className="p-8 flex gap-x-8 items-center flex-wrap">
+            <div className="group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/endo2323.png"
+                alt="one"
+              />
+              <p className="text-xl group-hover:font-semibold mt-6 text-gray-800 open">
+                Clothing
+              </p>
+            </div>
+            <div className=" group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/show434.png"
+                alt="one"
+              />
+              <p className="text-xl  group-hover:font-semibold mt-6 text-gray-800 open">
+                Footwear
+              </p>
+            </div>
+            <div className=" group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/bags2323g.png"
+                alt="one"
+              />
+              <p className="text-xl  group-hover:font-semibold mt-6 text-gray-800 open">
+                Bags
+              </p>
+            </div>
+            <div className="mt-8 group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/hands23fv5.png"
+                alt="one"
+              />
+              <p className="text-xl mt-6 group-hover:font-semibold  text-gray-800 open">
+                Accessories
+              </p>
+            </div>
+            <div className="mt-8 group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/perfume43456.png"
+                alt="one"
+              />
+              <p className="text-xl mt-6 group-hover:font-semibold  text-gray-800 open">
+                Fragrance
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Product 2 Men */}
+      <div
+        onClick={() => setshowPro1(true)}
+        className={`bg-black block z-20 bg-opacity-60 fixed top-0 w-full h-full backdrop-blur-lg ${
+          pro1 ? `block` : `hidden`
+        }`}
+      ></div>
+      <div
+        className={`pt-12 bg-white z-20  fixed top-0 right-0 left-0 duration-300 ease-in-out transform ${
+          pro1 ? `translate-y-0` : `translate-y-[-800px]`
+        }`}
+      >
+        <div className="flex justify-between items-center px-20">
+          <div className="flex items-center gap-x-20 ">
+            <p className="text-xl text-gray-800 cursor-pointer hover:border-gray-800 hover:border-b-4 border-transparent pb-8 h-[60px] open">
+              New{" "}
+            </p>
+            <p className="text-xl font-bold text-gray-800 cursor-pointer border-gray-800 border-b-4 pb-8 h-[60px] open">
+              Men
+            </p>
+            <p className="text-xl text-gray-800 cursor-pointer hover:border-gray-800 hover:border-b-4 border-transparent pb-8 h-[60px] open">
+              Women
+            </p>
+          </div>
+          <div onClick={() => setshowPro1(false)} className="-mt-4">
+            <svg
+              className="cursor-pointer"
+              width={18}
+              height={18}
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 2.09313L15.9069 0L9 6.90687L2.09313 0L0 2.09313L6.90687 9L0 15.9069L2.09313 18L9 11.0931L15.9069 18L18 15.9069L11.0931 9L18 2.09313Z"
+                fill="#1F2937"
+              />
+            </svg>
+          </div>
+        </div>
+        <hr className="border-gray-200 w-full" />
+        <div className="flex h-full">
+          <div className="pl-20 max-w-[376px] w-full mt-8">
+            <p className="text-xl text-gray-600 open hover:font-bold">Bags</p>
+            <p className="text-xl text-gray-600 open hover:font-bold my-8">
+              Shoes
+            </p>
+            <p className="text-xl text-gray-600 open hover:font-bold">
+              Accessories
+            </p>
+            <p className="text-xl text-gray-600 open hover:font-bold my-8">
+              Fragrances
+            </p>
+            <p className="text-xl text-gray-600 open hover:font-bold">
+              Ready to wear
+            </p>
+            <p className="text-xl text-gray-600 open hover:font-bold my-8">
+              Macem 2023 Collection
+            </p>
+            <p className="text-xl text-gray-600 open pb-20">
+              Macem X Lufu Collection
+            </p>
+          </div>
+          <div className="max-h-screen bg-gray-200 w-[1px] "></div>
+          <div className="p-8 flex gap-x-8 items-center flex-wrap">
+            <div className=" group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blurbaig045.png"
+                alt="one"
+              />
+              <p className="text-xl  group-hover:font-semibold mt-6 text-gray-800 open">
+                Backbacks
+              </p>
+            </div>
+            <div className=" group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/dogbag3424.png"
+                alt="one"
+              />
+              <p className="text-xl  group-hover:font-semibold mt-6 text-gray-800 open">
+                Travelling Bags
+              </p>
+            </div>
+            <div className=" group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/insidebag2344.png"
+                alt="one"
+              />
+              <p className="text-xl  group-hover:font-semibold mt-6 text-gray-800 open">
+                Business Bags
+              </p>
+            </div>
+            <div className="mt-8 group">
+              <img
+                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/waleet4546.png"
+                alt="one"
+              />
+              <p className="text-xl mt-6 group-hover:font-semibold  text-gray-800 open">
+                Wallets
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* end */}
+      {/* end */}
     </>
   );
 }

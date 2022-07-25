@@ -5,6 +5,10 @@
 .raleway {
   font-family: "Raleway", sans-serif;
 }
+.open{
+  font-family: 'Open Sans', sans-serif;
+
+}
 /* Scroll */
 html {
   scroll-behavior: smooth;

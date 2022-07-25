@@ -1,7 +1,7 @@
 import React from 'react'
 import LandingPage from '../components/landingPage/index'
 import Layout from '../components/layout'
-function index() {
+function Index() {
   return (
     <Layout>
       <LandingPage/>
@@ -9,4 +9,4 @@ function index() {
   )
 }
 
-export default index
+export default Index

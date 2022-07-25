@@ -26,7 +26,7 @@ function index() {
           <span className="font-bold open"> @Macem.genx </span> and become part
           of our family
         </p>
-        <div className="flex justify-center items-center gap-x-8 w-full lg:flex-row flex-col space-y-8">
+        <div className="flex justify-center items-center gap-x-8 w-full lg:flex-row flex-col gap-y-8">
           {instapic.map((item, index) => {
             return (
               <div
