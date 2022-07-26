@@ -22,7 +22,7 @@ function header(props) {
     },
     {
       name: "Magazine",
-      link: "/",
+      link: "./magzinemain",
       state: false,
     },
   ];
