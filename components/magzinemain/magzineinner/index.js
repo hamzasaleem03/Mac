@@ -74,12 +74,12 @@ function index() {
           </svg>
         </div>
         <div className="mt-10 mx-auto max-w-[842px] w-full">
-          <p class="text-2xl tracking-wide text-center text-gray-600 open">
+          <p className="text-2xl tracking-wide text-center text-gray-600 open">
             Here is a paragraph telling ya’all how awesome we are We offers
             style choices that make your outfit of the day look fire. Here is a
             paragraph telling ya’all how awesome we are we offers style choices{" "}
           </p>
-          <p class="text-2xl tracking-wide text-center text-gray-600 mt-6 open">
+          <p className="text-2xl tracking-wide text-center text-gray-600 mt-6 open">
             Here is a paragraph telling ya’all how awesome we are We offers
             style choices that make your outfit of the day look fire.
           </p>
@@ -90,7 +90,7 @@ function index() {
             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/pinki4345.png"
             alt="image"
           />
-          <p class="text-base text-center text-gray-800 open mt-4">
+          <p className="text-base text-center text-gray-800 open mt-4">
             Macem X Ralph Lauren{" "}
             <span className="ml-2 text-base italic font-italic text-gray-600 open">
               Summer of year 2023{" "}
@@ -98,7 +98,7 @@ function index() {
           </p>
         </div>
         <div className="text-center mt-10">
-          <p class="text-2xl tracking-wide text-center text-gray-600 max-w-[843px] w-full mx-auto">
+          <p className="text-2xl tracking-wide text-center text-gray-600 max-w-[843px] w-full mx-auto">
             Here is a paragraph telling ya’all how awesome we are We offers
             style choices that make your outfit of the day look fire. Here is a
             paragraph telling ya’all how awesome we are we offers style choices

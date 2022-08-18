@@ -74,12 +74,12 @@ function index() {
           </svg>
         </div>
         <div className="mt-10 max-w-[842px] w-full">
-          <p class="text-2xl tracking-wide text-left text-gray-600 open">
+          <p className="text-2xl tracking-wide text-left text-gray-600 open">
             Here is a paragraph telling ya’all how awesome we are We offers
             style choices that make your outfit of the day look fire. Here is a
             paragraph telling ya’all how awesome we are we offers style choices{" "}
           </p>
-          <p class="text-2xl tracking-wide text-left text-gray-600 mt-6 open">
+          <p className="text-2xl tracking-wide text-left text-gray-600 mt-6 open">
             Here is a paragraph telling ya’all how awesome we are We offers
             style choices that make your outfit of the day look fire.
           </p>
@@ -89,7 +89,7 @@ function index() {
             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/shaded23435.png"
             alt="image"
           />
-          <p class="text-base text-left text-gray-800 open mt-4">
+          <p className="text-base text-left text-gray-800 open mt-4">
             Macem X Ralph Lauren{" "}
             <span className="ml-2 text-base italic font-italic text-gray-600 open">
               Summer of year 2023{" "}

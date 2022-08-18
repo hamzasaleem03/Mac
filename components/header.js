@@ -218,7 +218,7 @@ function header(props) {
                 />
               </svg>
 
-              <p class="text-base leading-none text-right text-gray-800 open">
+              <p className="text-base leading-none text-right text-gray-800 open">
                 Search
               </p>
             </div>
@@ -238,7 +238,7 @@ function header(props) {
                 />
               </svg>
 
-              <p class="text-base leading-none text-right text-gray-800 open">
+              <p className="text-base leading-none text-right text-gray-800 open">
                 Favourites
               </p>
             </div>
@@ -279,7 +279,7 @@ function header(props) {
                 />
               </svg>
 
-              <p class="text-base leading-none text-right text-gray-800 open">
+              <p className="text-base leading-none text-right text-gray-800 open">
                 Bag
               </p>
             </div>
@@ -434,7 +434,7 @@ function header(props) {
       ></div>
       <div
         className={`pt-12 bg-white max-h-[850px] z-20  fixed top-0 right-0 left-0 duration-300 ease-in-out transform ${
-          pro ? `translate-y-0` : `translate-y-[-900px]`
+          pro ? `translate-y-0` : `translate-y-[-1200px]`
         }`}
       >
         <div className="flex justify-between items-center px-20">
